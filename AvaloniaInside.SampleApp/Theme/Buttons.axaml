@@ -1,0 +1,258 @@
+<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Design.PreviewWith>
+        <Border Padding="20"
+                Width="400">
+            <!-- Add Controls for Previewer Here -->
+            <StackPanel Orientation="Vertical">
+                <Button FontSize="22"
+                        Classes="iconButtonWithText"
+                        Height="40">
+                    <StackPanel>
+                        <Viewbox>
+                            <Path Classes="info" />
+                        </Viewbox>
+                        <TextBlock Text="Neu" />
+                    </StackPanel>
+                </Button>
+                <Button FontSize="22"
+                        Classes="iconButtonWithText"
+                        Height="40">
+                    <StackPanel>
+                        <TextBlock Text="Neu" />
+                        <Viewbox>
+                            <Path Classes="info" />
+                        </Viewbox>
+                    </StackPanel>
+                </Button>
+            </StackPanel>
+        </Border>
+    </Design.PreviewWith>
+
+
+    <Style Selector="Button.actionPrimary">
+        <Setter Property="Background"
+                Value="{StaticResource HighlightColor}" />
+        <Setter Property="Foreground"
+                Value="White" />
+        <Setter Property="CornerRadius"
+                Value="5" />
+    </Style>
+    <Style Selector="Button.actionPrimary:pointerover /template/ ContentPresenter#PART_ContentPresenter">
+        <Setter Property="Background"
+                Value="{StaticResource HighlightColor90}" />
+        <Setter Property="TextBlock.Foreground"
+                Value="White" />
+    </Style>
+
+
+    <Style Selector="Button.actionSecondary">
+        <Setter Property="Background"
+                Value="{StaticResource Gray8}" />
+        <Setter Property="Foreground"
+                Value="White" />
+        <Setter Property="CornerRadius"
+                Value="5" />
+    </Style>
+    <Style Selector="Button.actionSecondary:pointerover /template/ ContentPresenter#PART_ContentPresenter">
+        <Setter Property="Background"
+                Value="{StaticResource Gray6}" />
+        <Setter Property="TextBlock.Foreground"
+                Value="White" />
+    </Style>
+
+
+    <Style Selector="Button.actionAlert">
+        <Setter Property="Background"
+                Value="{StaticResource AccentRed}" />
+        <Setter Property="Foreground"
+                Value="White" />
+        <Setter Property="CornerRadius"
+                Value="5" />
+    </Style>
+    <Style Selector="Button.actionAlert:pointerover /template/ ContentPresenter#PART_ContentPresenter">
+        <Setter Property="Background"
+                Value="{StaticResource AccentRed80}" />
+        <Setter Property="TextBlock.Foreground"
+                Value="White" />
+    </Style>
+    <!-- Add Styles Here -->
+    <!-- IconButton -->
+    <Style Selector="Button.iconButton">
+        <Setter Property="Padding"
+                Value="0" />
+        <Setter Property="Background"
+                Value="Transparent" />
+        <Setter Property="Cursor"
+                Value="Hand" />
+    </Style>
+    <Style Selector="Button.iconButton > Viewbox">
+        <Setter Property="Margin"
+                Value="0" />
+        <Setter Property="VerticalAlignment"
+                Value="Stretch" />
+        <Setter Property="HorizontalAlignment"
+                Value="Stretch" />
+        <Setter Property="RenderTransform"
+                Value="scale(1)" />
+        <Setter Property="Transitions">
+            <Setter.Value>
+                <Transitions>
+                    <TransformOperationsTransition Property="RenderTransform"
+                                                   Duration="0:0:.25"
+                                                   Easing="CubicEaseInOut" />
+                </Transitions>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style Selector="Button.iconButton:pointerover /template/ ContentPresenter#PART_ContentPresenter">
+        <Setter Property="Background"
+                Value="Transparent" />
+        <Setter Property="BorderBrush"
+                Value="Transparent" />
+    </Style>
+    <Style Selector="Button.iconButton[IsPressed=True] /template/ ContentPresenter#PART_ContentPresenter">
+        <Setter Property="Background"
+                Value="Transparent" />
+        <Setter Property="BorderBrush"
+                Value="Transparent" />
+    </Style>
+    <Style Selector="Button.iconButton:pointerover > Viewbox">
+        <Setter Property="RenderTransform"
+                Value="scale(1.1)" />
+    </Style>
+    <Style Selector="Button.iconButton[IsPressed=True] > Viewbox">
+        <Setter Property="RenderTransform"
+                Value="scale(1.1)" />
+    </Style>
+    <Style Selector="Button.iconButton > Viewbox">
+        <Setter Property="Margin"
+                Value="0" />
+        <Setter Property="VerticalAlignment"
+                Value="Stretch" />
+        <Setter Property="HorizontalAlignment"
+                Value="Stretch" />
+        <Setter Property="RenderTransform"
+                Value="scale(1)" />
+        <Setter Property="Transitions">
+            <Setter.Value>
+                <Transitions>
+                    <TransformOperationsTransition Property="RenderTransform"
+                                                   Duration="0:0:.25"
+                                                   Easing="CubicEaseInOut" />
+                </Transitions>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style Selector="Button.iconButton:pointerover > Viewbox">
+        <Setter Property="RenderTransform"
+                Value="scale(1.1)" />
+    </Style>
+    <Style Selector="Button.iconButton[IsPressed=True] > Viewbox">
+        <Setter Property="RenderTransform"
+                Value="scale(1.1)" />
+    </Style>
+
+
+    <Style Selector="Button.iconButtonWithText">
+        <Setter Property="CornerRadius"
+                Value="5" />
+        <Setter Property="Padding"
+                Value="7,5,7,5" />
+        <Setter Property="Background"
+                Value="Transparent" />
+        <Setter Property="Cursor"
+                Value="Hand" />
+    </Style>
+    <Style Selector="Button.iconButtonWithText > StackPanel">
+        <Setter Property="Orientation"
+                Value="Horizontal" />
+        <Setter Property="VerticalAlignment"
+                Value="Center" />
+        <Setter Property="Spacing"
+                Value="5" />
+    </Style>
+    <Style Selector="Button.iconButtonWithText > StackPanel > TextBlock">
+        <Setter Property="VerticalAlignment"
+                Value="Center" />
+        <Setter Property="Margin"
+                Value="0,1,0,0" />
+    </Style>
+    <Style Selector="Button.iconButtonWithText > StackPanel > Viewbox">
+        <Setter Property="Margin"
+                Value="0" />
+        <Setter Property="VerticalAlignment"
+                Value="Center" />
+        <Setter Property="HorizontalAlignment"
+                Value="Center" />
+        <Setter Property="RenderTransform"
+                Value="scale(1)" />
+        <Setter Property="Transitions">
+            <Setter.Value>
+                <Transitions>
+                    <TransformOperationsTransition Property="RenderTransform"
+                                                   Duration="0:0:.25"
+                                                   Easing="CubicEaseInOut" />
+                </Transitions>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style Selector="Button.iconButtonWithText:pointerover /template/ ContentPresenter#PART_ContentPresenter">
+        <Setter Property="Background"
+                Value="{DynamicResource Gray2}" />
+        <Setter Property="BorderBrush"
+                Value="Transparent" />
+        <Setter Property="Cursor"
+                Value="Hand" />
+    </Style>
+    <Style Selector="Button.iconButtonWithText[IsPressed=True] /template/ ContentPresenter#PART_ContentPresenter">
+        <Setter Property="Background"
+                Value="{DynamicResource Gray2}" />
+        <Setter Property="BorderBrush"
+                Value="Transparent" />
+        <Setter Property="Cursor"
+                Value="Hand" />
+    </Style>
+    <Style Selector="Button.iconButtonWithText:pointerover > Viewbox">
+        <Setter Property="RenderTransform"
+                Value="scale(1.1)" />
+    </Style>
+    <Style Selector="Button.iconButtonWithText[IsPressed=True] > Viewbox">
+        <Setter Property="RenderTransform"
+                Value="scale(1.1)" />
+    </Style>
+
+
+    <Style Selector="Button.numericKey">
+        <Setter Property="Background"
+                Value="{StaticResource Gray6}" />
+        <Setter Property="Foreground"
+                Value="White" />
+        <Setter Property="CornerRadius"
+                Value="5" />
+        <Setter Property="HorizontalAlignment"
+                Value="Stretch" />
+        <Setter Property="VerticalAlignment"
+                Value="Stretch" />
+        <Setter Property="HorizontalContentAlignment"
+                Value="Center" />
+        <Setter Property="VerticalContentAlignment"
+                Value="Center" />
+        <Setter Property="FontSize"
+                Value="20" />
+        <Setter Property="Margin"
+                Value="2" />
+    </Style>
+    <Style Selector="Button.numericKey:pointerover /template/ ContentPresenter#PART_ContentPresenter">
+        <Setter Property="Background"
+                Value="{StaticResource HighlightColor70}" />
+        <Setter Property="TextBlock.Foreground"
+                Value="White" />
+    </Style>
+    <Style Selector="Button.numericKey:pressed /template/ ContentPresenter#PART_ContentPresenter">
+        <Setter Property="Background"
+                Value="{StaticResource HighlightColor90}" />
+        <Setter Property="TextBlock.Foreground"
+                Value="White" />
+    </Style>
+</Styles>

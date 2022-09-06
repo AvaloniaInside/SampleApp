@@ -1,0 +1,130 @@
+<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Design.PreviewWith>
+        <Border Padding="20">
+            <!-- Add Controls for Previewer Here -->
+        </Border>
+    </Design.PreviewWith>
+
+   <Styles.Resources>
+        <Color x:Key="BaseColor">#153e6d</Color>
+
+        <SolidColorBrush x:Key="AccentColor"
+                         Color="{StaticResource BaseColor}" />
+
+        <SolidColorBrush x:Key="HighlightColor"
+                         Color="{StaticResource BaseColor}" />
+        <SolidColorBrush x:Key="HighlightColor10"
+                         Color="{StaticResource BaseColor}"
+                         Opacity="0.1" />
+        <SolidColorBrush x:Key="HighlightColor20"
+                         Color="{StaticResource BaseColor}"
+                         Opacity="0.2" />
+        <SolidColorBrush x:Key="HighlightColor30"
+                         Color="{StaticResource BaseColor}"
+                         Opacity="0.3" />
+        <SolidColorBrush x:Key="HighlightColor40"
+                         Color="{StaticResource BaseColor}"
+                         Opacity="0.4" />
+        <SolidColorBrush x:Key="HighlightColor50"
+                         Color="{StaticResource BaseColor}"
+                         Opacity="0.5" />
+        <SolidColorBrush x:Key="HighlightColor60"
+                         Color="{StaticResource BaseColor}"
+                         Opacity="0.6" />
+        <SolidColorBrush x:Key="HighlightColor70"
+                         Color="{StaticResource BaseColor}"
+                         Opacity="0.7" />
+        <SolidColorBrush x:Key="HighlightColor80"
+                         Color="{StaticResource BaseColor}"
+                         Opacity="0.8" />
+        <SolidColorBrush x:Key="HighlightColor90"
+                         Color="{StaticResource BaseColor}"
+                         Opacity="0.9" />
+
+        <SolidColorBrush x:Key="HighlightForegroundColor"
+                         Color="#FF005B99" />
+        <SolidColorBrush x:Key="HighlightSelectedColor"
+                         Color="#FF005B99" />
+        <SolidColorBrush x:Key="HighlightSelectedForegroundColor"
+                         Color="#FF005B99" />
+
+        <SolidColorBrush x:Key="AccentRed"
+                         Color="#FFAA0A05" />
+        <SolidColorBrush x:Key="AccentRed10"
+                         Color="#19AA0A05" />
+        <SolidColorBrush x:Key="AccentRed20"
+                         Color="#33AA0A05" />
+        <SolidColorBrush x:Key="AccentRed30"
+                         Color="#4CAA0A05" />
+        <SolidColorBrush x:Key="AccentRed40"
+                         Color="#66AA0A05" />
+        <SolidColorBrush x:Key="AccentRed50"
+                         Color="#7FAA0A05" />
+        <SolidColorBrush x:Key="AccentRed60"
+                         Color="#99AA0A05" />
+        <SolidColorBrush x:Key="AccentRed70"
+                         Color="#B2AA0A05" />
+        <SolidColorBrush x:Key="AccentRed80"
+                         Color="#CCAA0A05" />
+        <SolidColorBrush x:Key="AccentRed90"
+                         Color="#E5AA0A05" />
+
+        <SolidColorBrush x:Key="AccentYellow"
+                         Color="#FAC832" />
+
+        <SolidColorBrush x:Key="AccentGreen"
+                         Color="#00893D" />
+
+        <SolidColorBrush x:Key="AccentOrange"
+                         Color="#FFFC6A03" />
+        <SolidColorBrush x:Key="AccentOrange10"
+                         Color="#19FC6A03" />
+        <SolidColorBrush x:Key="AccentOrange20"
+                         Color="#33FC6A03" />
+        <SolidColorBrush x:Key="AccentOrange30"
+                         Color="#4CFC6A03" />
+        <SolidColorBrush x:Key="AccentOrange40"
+                         Color="#66FC6A03" />
+        <SolidColorBrush x:Key="AccentOrange50"
+                         Color="#7FFC6A03" />
+        <SolidColorBrush x:Key="AccentOrange60"
+                         Color="#99FC6A03" />
+        <SolidColorBrush x:Key="AccentOrange70"
+                         Color="#B2FC6A03" />
+        <SolidColorBrush x:Key="AccentOrange80"
+                         Color="#CCFC6A03" />
+        <SolidColorBrush x:Key="AccentOrange90"
+                         Color="#E5FC6A03" />
+
+        <SolidColorBrush x:Key="Gray13"
+                         Color="#2D3032" />
+        <SolidColorBrush x:Key="Gray12"
+                         Color="#404547" />
+        <SolidColorBrush x:Key="Gray11"
+                         Color="#54595B" />
+        <SolidColorBrush x:Key="Gray10"
+                         Color="#666A6C" />
+        <SolidColorBrush x:Key="Gray9"
+                         Color="#777D7F" />
+        <SolidColorBrush x:Key="Gray8"
+                         Color="#878D90" />
+        <SolidColorBrush x:Key="Gray7"
+                         Color="#9CA3A6" />
+        <SolidColorBrush x:Key="Gray6"
+                         Color="#A9B1B6" />
+        <SolidColorBrush x:Key="Gray5"
+                         Color="#B8BDC5" />
+        <SolidColorBrush x:Key="Gray4"
+                         Color="#CDD3D6" />
+        <SolidColorBrush x:Key="Gray3"
+                         Color="#DEE3E7" />
+        <SolidColorBrush x:Key="Gray2"
+                         Color="#E8EEF1" />
+        <SolidColorBrush x:Key="Gray1"
+                         Color="#F4F8FA" />
+
+        <SolidColorBrush x:Key="BoxShadowColor"
+                         Color="#0D22292F" />
+    </Styles.Resources>
+</Styles>

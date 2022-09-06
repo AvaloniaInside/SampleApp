@@ -1,0 +1,21 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:navigation="clr-namespace:AvaloniaInside.SampleApp.Navigation"
+             xmlns:views="clr-namespace:AvaloniaInside.SampleApp.Views"
+             mc:Ignorable="d"
+             d:DesignWidth="800"
+             d:DesignHeight="450"
+             x:Class="AvaloniaInside.SampleApp.Views.HomeView">
+    <StackPanel Orientation="Vertical"
+                VerticalAlignment="Center"
+                HorizontalAlignment="Center">
+        <TextBlock Text="THIS IS THE HOME VIEW"
+                   FontSize="40" />
+        <Button Content="Click me to go to next page"
+                Command="{Binding Source={x:Static navigation:NavigationHandler.Instance}, Path=PushCommand}"
+                CommandParameter="{x:Type views:SecondView}"/>
+
+    </StackPanel>
+</UserControl>

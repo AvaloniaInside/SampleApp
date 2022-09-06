@@ -2,12 +2,22 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:views="clr-namespace:AvaloniaInside.SampleApp.Views"
+             xmlns:viewModels="clr-namespace:AvaloniaInside.SampleApp.ViewModels"
+             xmlns:navigation="clr-namespace:AvaloniaInside.SampleApp.Navigation"
              mc:Ignorable="d"
              d:DesignWidth="800"
              d:DesignHeight="450"
-             x:Class="AvaloniaInside.SampleApp.Views.MainView">
-    <TextBlock Text="Welcome to AvaloniaInside"
-               VerticalAlignment="Center"
-               HorizontalAlignment="Center"
-               FontSize="50" />
+             x:Class="AvaloniaInside.SampleApp.Views.MainView"
+             x:CompileBindings="True"
+             x:DataType="viewModels:MainViewViewModel">
+    <UserControl.DataContext>
+        <viewModels:MainViewViewModel />
+    </UserControl.DataContext>
+    <Grid RowDefinitions="65, *">
+        <ContentControl Grid.Row="1"
+                        Content="{Binding Source={x:Static navigation:NavigationHandler.Instance}, Path=CurrentView.Control}" />
+        <views:Header Grid.Row="0" />
+    </Grid>
+
 </UserControl>

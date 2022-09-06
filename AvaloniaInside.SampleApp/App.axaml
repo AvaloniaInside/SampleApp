@@ -8,5 +8,8 @@
 
     <Application.Styles>
         <FluentTheme Mode="Light" />
+        <StyleInclude Source="avares://AvaloniaInside.SampleApp/Theme/Colors.axaml"></StyleInclude>
+        <StyleInclude Source="avares://AvaloniaInside.SampleApp/Theme/Icons.axaml"></StyleInclude>
+        <StyleInclude Source="avares://AvaloniaInside.SampleApp/Theme/Buttons.axaml"></StyleInclude>
     </Application.Styles>
 </Application>

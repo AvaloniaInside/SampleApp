@@ -1,0 +1,68 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:navigation="clr-namespace:AvaloniaInside.SampleApp.Navigation"
+             xmlns:viewModels="clr-namespace:AvaloniaInside.SampleApp.ViewModels"
+             mc:Ignorable="d"
+             d:DesignWidth="800"
+             d:DesignHeight="450"
+             x:Class="AvaloniaInside.SampleApp.Views.Header"
+             x:DataType="viewModels:MainViewViewModel"
+             x:CompileBindings="True"
+             ClipToBounds="False">
+    <Border VerticalAlignment="Top"
+            Height="65"
+            Background="White"
+            BoxShadow="0 -5 30 5 DarkGray">
+        <Grid ColumnDefinitions="*,*,*">
+            <StackPanel Grid.Column="0"
+                        HorizontalAlignment="Left"
+                        Orientation="Horizontal">
+                <Button Classes="iconButton"
+                        IsVisible="{Binding Source={x:Static navigation:NavigationHandler.Instance}, Path=CanGoBack}"
+                        Command="{Binding Source={x:Static navigation:NavigationHandler.Instance}, Path=GoBackCommand}">
+                    <StackPanel Orientation="Horizontal"
+                                VerticalAlignment="Center"
+                                Spacing="10"
+                                Margin="10,0,0,0">
+                        <Viewbox VerticalAlignment="Center"
+                                 Width="30">
+                            <Path Classes="arrowLeft" />
+                        </Viewbox>
+                        <TextBlock Foreground="Gray"
+                                   FontSize="20"
+                                   Margin="0,2,0,0"
+                                   VerticalAlignment="Center"
+                                   Text="{Binding Source={x:Static navigation:NavigationHandler.Instance}, Path=PreviusItem.Name}" />
+                    </StackPanel>
+                </Button>
+            </StackPanel>
+            <TextBlock Grid.Column="1"
+                       FontSize="34"
+                       Foreground="Black"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                       Text="{Binding Source={x:Static navigation:NavigationHandler.Instance}, Path=CurrentView.Name}" />
+            <StackPanel Grid.Column="2"
+                        HorizontalAlignment="Right"
+                        VerticalAlignment="Center"
+                        Orientation="Vertical"
+                        Spacing="5"
+                        Margin="0,0,10,0">
+                <TextBlock FontSize="16"
+                           HorizontalAlignment="Right"
+                           Foreground="Gray"
+                           Width="200"
+                           TextAlignment="Right"
+                           Text="{Binding CurrentDate}" />
+                <TextBlock FontSize="16"
+                           HorizontalAlignment="Right"
+                           Width="200"
+                           TextAlignment="Right"
+                           Foreground="Gray"
+                           Text="{Binding CurrentTime}" />
+            </StackPanel>
+        </Grid>
+    </Border>
+</UserControl>
