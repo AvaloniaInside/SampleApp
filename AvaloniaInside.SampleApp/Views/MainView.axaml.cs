@@ -1,3 +1,4 @@
+using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Markup.Xaml;
 using Avalonia.Media;
@@ -16,6 +17,12 @@ public class MainView : UserControl
     private void InitializeComponent()
     {
         AvaloniaXamlLoader.Load(this);
+    }
+
+    protected override void OnAttachedToVisualTree(VisualTreeAttachmentEventArgs e)
+    {
+        e.Root.Renderer.DrawFps = true;
+        base.OnAttachedToVisualTree(e);
     }
 
     public override void Render(DrawingContext context)
