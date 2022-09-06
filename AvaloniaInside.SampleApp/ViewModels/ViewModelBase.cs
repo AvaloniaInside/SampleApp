@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using ReactiveUI;
+﻿using ReactiveUI;
 
-namespace AvaloniaInside.SampleApp.ViewModels
+namespace AvaloniaInside.SampleApp.ViewModels;
+
+public class ViewModelBase : ReactiveObject
 {
-    public class ViewModelBase : ReactiveObject
-    {
-    }
 }
