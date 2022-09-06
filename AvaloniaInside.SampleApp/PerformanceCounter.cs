@@ -6,12 +6,12 @@ namespace AvaloniaInside.SampleApp;
 public static class PerformanceCounter
 {
     private static readonly Stopwatch _watch = new();
-    private static DateTime _startTime;
+    private static long _totalTime;
 
     public static void Start()
     {
         _watch.Start();
-        _startTime = DateTime.Now;
+        _totalTime = 0;
     }
 
     public static void Stop()
@@ -23,8 +23,10 @@ public static class PerformanceCounter
     {
         if (!_watch.IsRunning)
             Start();
+        var step = _watch.ElapsedMilliseconds;
+        _totalTime += step;
         Console.WriteLine(
-            $"Total:{(DateTime.Now - _startTime).TotalMilliseconds} ms Step:{_watch.ElapsedMilliseconds} ms: {message}");
+            $"Total:{_totalTime} ms Step:{step} ms: {message}");
         _watch.Restart();
     }
 }

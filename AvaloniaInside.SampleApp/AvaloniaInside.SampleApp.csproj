@@ -5,6 +5,7 @@
         <Nullable>enable</Nullable>
         <AvaloniaVersion>11.0.0-preview1</AvaloniaVersion>
         <LangVersion>default</LangVersion>
+        <RuntimeIdentifiers>linux-arm64</RuntimeIdentifiers>
     </PropertyGroup>
     <ItemGroup>
         <Folder Include="Models\" />
