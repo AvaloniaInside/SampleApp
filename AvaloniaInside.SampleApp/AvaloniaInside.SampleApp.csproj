@@ -14,6 +14,10 @@
     </ItemGroup>
     <ItemGroup>
         <EmbeddedResource Include="Assets\Fonts\ProximaNova-Regular.otf" />
+        <EmbeddedResource Update="Resources.resx">
+          <Generator>ResXFileCodeGenerator</Generator>
+          <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+        </EmbeddedResource>
     </ItemGroup>
     <ItemGroup>
         <PackageReference Include="Avalonia" Version="$(AvaloniaVersion)" />
@@ -23,5 +27,14 @@
         <PackageReference Condition="'$(AvaloniaVersion)' == '11.0.0-preview1'" Include="Avalonia.Themes.Fluent" Version="$(AvaloniaVersion)" />
         <PackageReference Include="Avalonia.ReactiveUI" Version="$(AvaloniaVersion)" />
         <PackageReference Include="Avalonia.LinuxFrameBuffer" Version="$(AvaloniaVersion)" />
+        <PackageReference Include="SkiaSharp.Skottie" Version="2.88.1" />
+        <PackageReference Include="SkiaSharp.NativeAssets.Linux.NoDependencies" Version="2.88.1" />
+    </ItemGroup>
+    <ItemGroup>
+      <Compile Update="Resources.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>Resources.resx</DependentUpon>
+      </Compile>
     </ItemGroup>
 </Project>

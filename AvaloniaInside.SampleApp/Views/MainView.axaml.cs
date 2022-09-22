@@ -31,6 +31,7 @@ public class MainView : UserControl
 
         if (_firstTimeRendered) return;
         _firstTimeRendered = true;
+        Program.StopSplashScreen();
         PerformanceCounter.Step("First time rendered");
     }
 }

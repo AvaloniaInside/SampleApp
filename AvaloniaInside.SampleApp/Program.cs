@@ -1,16 +1,22 @@
 ﻿using System;
 using System.Diagnostics;
+using System.IO;
 using System.Linq;
+using System.Text;
 using System.Threading;
 using Avalonia;
 using Avalonia.LinuxFramebuffer.Output;
 using Avalonia.Media;
 using Avalonia.ReactiveUI;
+using AvaloniaInside.SampleApp.Splash;
+using SkiaSharp.Skottie;
 
 namespace AvaloniaInside.SampleApp;
 
 internal class Program
 {
+    private static AppSplash _appSplash;
+
     // Initialization code. Don't use any Avalonia, third-party APIs or any
     // SynchronizationContext-reliant code before AppMain is called: things aren't initialized
     // yet and stuff might break.
@@ -31,6 +37,11 @@ internal class Program
         {
             var drmOutput = new DrmOutput(GetArgumentValue(args, "--card", "/dev/dri/card0"));
             PerformanceCounter.Step("DrmOutput created");
+            _appSplash = new AppSplash(drmOutput);
+            var animation = Animation.Create(new MemoryStream(Encoding.UTF8.GetBytes(Resources.SplashAnimation)));
+            animation.Seek(0);
+            _appSplash.Load(animation);
+            PerformanceCounter.Step("Splashscreen loaded");
             return app.StartLinuxDirect(args, drmOutput);
         }
 
@@ -75,5 +86,10 @@ internal class Program
             }
 
         return defaultValue;
+    }
+
+    internal static void StopSplashScreen()
+    {
+        _appSplash?.Dispose();
     }
 }
