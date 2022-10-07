@@ -2,11 +2,11 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Input;
-using ReactiveUI;
+using AvaloniaInside.SampleApp.ViewModels;
 
 namespace AvaloniaInside.SampleApp.Navigation;
 
-public sealed class NavigationHandler : ReactiveObject
+public sealed class NavigationHandler : NotifyPropertyChangedObject
 {
     public static NavigationHandler Instance = new();
     private readonly List<NavigationItem> _cachedObjects = new();
@@ -23,8 +23,8 @@ public sealed class NavigationHandler : ReactiveObject
         get => _previusItem;
         set
         {
-            this.RaiseAndSetIfChanged(ref _previusItem, value);
-            this.RaisePropertyChanged(nameof(CanGoBack));
+            RaiseAndSetIfChanged(ref _previusItem, value);
+            OnPropertyChanged(nameof(CanGoBack));
         }
     }
 
@@ -33,11 +33,11 @@ public sealed class NavigationHandler : ReactiveObject
     public NavigationItem CurrentView
     {
         get => _currentItem;
-        set => this.RaiseAndSetIfChanged(ref _currentItem, value);
+        set => RaiseAndSetIfChanged(ref _currentItem, value);
     }
 
-    public ICommand GoBackCommand => ReactiveCommand.Create(GoBack);
-    public ICommand PushCommand => ReactiveCommand.Create<Type>(Push);
+    public ICommand GoBackCommand => RelayCommand.Create(GoBack);
+    public ICommand PushCommand => RelayCommand.Create<Type>(Push);
 
     public void Push(Type contentType)
     {

@@ -6,10 +6,21 @@
         <local:ViewLocator />
     </Application.DataTemplates>
 
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceInclude Source="avares://AvaloniaInside.SampleApp/Theme/Colors.axaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
     <Application.Styles>
-        <FluentTheme Mode="Light" />
-        <StyleInclude Source="avares://AvaloniaInside.SampleApp/Theme/Colors.axaml"></StyleInclude>
-        <StyleInclude Source="avares://AvaloniaInside.SampleApp/Theme/Icons.axaml"></StyleInclude>
-        <StyleInclude Source="avares://AvaloniaInside.SampleApp/Theme/Buttons.axaml"></StyleInclude>
+        <StyleInclude Source="avares://Avalonia.Themes.Fluent/Accents/AccentColors.xaml" />
+        <StyleInclude Source="avares://Avalonia.Themes.Fluent/Accents/BaseLight.xaml" />
+        <StyleInclude Source="avares://Avalonia.Themes.Fluent/Accents/Base.xaml" />
+        <StyleInclude Source="avares://Avalonia.Themes.Fluent/Accents/FluentControlResourcesLight.xaml" />
+        <StyleInclude Source="avares://AvaloniaInside.SampleApp/Theme/CustomFluentTheme.axaml" />
+        <StyleInclude Source="avares://AvaloniaInside.SampleApp/Theme/Icons.axaml" />
+        <StyleInclude Source="avares://AvaloniaInside.SampleApp/Theme/Buttons.axaml" />
     </Application.Styles>
+
 </Application>

@@ -1,10 +1,10 @@
 using System;
 using Avalonia.Controls;
-using ReactiveUI;
+using AvaloniaInside.SampleApp.ViewModels;
 
 namespace AvaloniaInside.SampleApp.Navigation;
 
-public class NavigationItem : ReactiveObject
+public class NavigationItem : NotifyPropertyChangedObject
 {
     private Control? _control;
 

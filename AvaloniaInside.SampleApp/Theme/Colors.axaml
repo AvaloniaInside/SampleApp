@@ -1,13 +1,12 @@
-<Styles xmlns="https://github.com/avaloniaui"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<ResourceDictionary xmlns="https://github.com/avaloniaui"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <Design.PreviewWith>
         <Border Padding="20">
             <!-- Add Controls for Previewer Here -->
         </Border>
     </Design.PreviewWith>
 
-   <Styles.Resources>
-        <Color x:Key="BaseColor">#153e6d</Color>
+   <Color x:Key="BaseColor">#153e6d</Color>
 
         <SolidColorBrush x:Key="AccentColor"
                          Color="{StaticResource BaseColor}" />
@@ -126,5 +125,4 @@
 
         <SolidColorBrush x:Key="BoxShadowColor"
                          Color="#0D22292F" />
-    </Styles.Resources>
-</Styles>
+</ResourceDictionary>

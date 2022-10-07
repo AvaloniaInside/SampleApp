@@ -2,7 +2,6 @@ using System;
 using System.Timers;
 using AvaloniaInside.SampleApp.Navigation;
 using AvaloniaInside.SampleApp.Views;
-using ReactiveUI;
 
 namespace AvaloniaInside.SampleApp.ViewModels;
 
@@ -26,13 +25,13 @@ public class MainViewViewModel : ViewModelBase
     public string CurrentDate
     {
         get => _currentDate;
-        set => this.RaiseAndSetIfChanged(ref _currentDate, value);
+        set => RaiseAndSetIfChanged(ref _currentDate, value);
     }
 
     public string CurrentTime
     {
         get => _currentTime;
-        set => this.RaiseAndSetIfChanged(ref _currentTime, value);
+        set => RaiseAndSetIfChanged(ref _currentTime, value);
     }
 
     private void DateTimeTimerOnElapsed(object? sender, ElapsedEventArgs e)

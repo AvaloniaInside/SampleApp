@@ -7,11 +7,14 @@
              mc:Ignorable="d"
              d:DesignWidth="800"
              d:DesignHeight="450"
+             x:CompileBindings="True"
+             x:DataType="views:HomeView"
              x:Class="AvaloniaInside.SampleApp.Views.HomeView">
     <StackPanel Orientation="Vertical"
                 VerticalAlignment="Center"
                 HorizontalAlignment="Center">
         <TextBlock Text="THIS IS THE HOME VIEW"
+                   Height="100"
                    FontSize="40" />
         <Button Content="Click me to go to next page"
                 Command="{Binding Source={x:Static navigation:NavigationHandler.Instance}, Path=PushCommand}"

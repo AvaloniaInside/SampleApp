@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using Avalonia;
+using Avalonia.LinuxFramebuffer;
 using Avalonia.LinuxFramebuffer.Output;
 using Avalonia.Media;
-using Avalonia.ReactiveUI;
 using AvaloniaInside.SampleApp.Splash;
 using SkiaSharp.Skottie;
 
@@ -35,7 +35,11 @@ internal class Program
 
         if (isDrm)
         {
-            var drmOutput = new DrmOutput(GetArgumentValue(args, "--card", "/dev/dri/card0"));
+            var drmOutput = new DrmOutput(GetArgumentValue(args, "--card", "/dev/dri/card0"), false,
+                new DrmOutputOptions
+                {
+                    EnableInitialBufferSwapping = false
+                });
             PerformanceCounter.Step("DrmOutput created");
             _appSplash = new AppSplash(drmOutput);
             var animation = Animation.Create(new MemoryStream(Encoding.UTF8.GetBytes(Resources.SplashAnimation)));
@@ -62,8 +66,7 @@ internal class Program
                     "resm:AvaloniaInside.SampleApp.Assets?assembly=AvaloniaInside.SampleApp#Proxima Nova"
             })
             .UsePlatformDetect()
-            .LogToTrace()
-            .UseReactiveUI();
+            .LogToTrace();
     }
 
     private static string GetArgumentValue(string[] args, string parameter, string defaultValue = "")
