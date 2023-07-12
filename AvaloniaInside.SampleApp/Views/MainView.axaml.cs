@@ -3,11 +3,12 @@ using Avalonia.Controls;
 using Avalonia.Data;
 using Avalonia.Markup.Xaml;
 using Avalonia.Media;
+using Avalonia.Rendering;
 using AvaloniaInside.SampleApp.Navigation;
 
 namespace AvaloniaInside.SampleApp.Views;
 
-public class MainView : UserControl
+public partial class MainView : UserControl
 {
     private bool _firstTimeRendered;
 
@@ -23,7 +24,8 @@ public class MainView : UserControl
 
     protected override void OnAttachedToVisualTree(VisualTreeAttachmentEventArgs e)
     {
-        e.Root.Renderer.DrawFps = true;
+        TopLevel.GetTopLevel(this).RendererDiagnostics.DebugOverlays = RendererDebugOverlays.RenderTimeGraph |
+                                                                       RendererDebugOverlays.LayoutTimeGraph;
         base.OnAttachedToVisualTree(e);
         // CreateView();
         // PerformanceCounter.Step("View created");

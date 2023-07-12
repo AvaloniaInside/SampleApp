@@ -3,7 +3,7 @@
         <OutputType>WinExe</OutputType>
         <TargetFramework>net6.0</TargetFramework>
         <Nullable>enable</Nullable>
-        <AvaloniaVersion>11.0.0-preview1</AvaloniaVersion>
+        <AvaloniaVersion>11.0.0</AvaloniaVersion>
         <LangVersion>default</LangVersion>
         <RuntimeIdentifiers>linux-arm64</RuntimeIdentifiers>
         <InvariantGlobalization>true</InvariantGlobalization>
